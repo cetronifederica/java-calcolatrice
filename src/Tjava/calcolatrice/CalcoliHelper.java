@@ -78,4 +78,11 @@ public class CalcoliHelper {
 			return numero2;
 		}
 	}
+
+	// elevamento a potenza
+
+	public static double elevamentoPotenza(double base, double esponente) {
+		double result = Math.pow(base, esponente);
+		return result;
+	}
 }

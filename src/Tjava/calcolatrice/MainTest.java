@@ -21,18 +21,21 @@ public class MainTest {
 
 		// numero assoluto
 
-		System.out.println(CalcoliHelper.moltiplicazione(3.3, 3.3));
+		System.out.println(CalcoliHelper.numeroAssoluto(3));
 
 		System.out.println(CalcoliHelper.numeroAssoluto(3.3));
 
 		// minimo
 		System.out.println(CalcoliHelper.minimo(6, 9));
 		System.out.println(CalcoliHelper.minimo(2.5, 3.5));
-		// massimo
 
+		// massimo
 		System.out.println(CalcoliHelper.massimo(10, 6));
 
 		System.out.println(CalcoliHelper.massimo(6.5, 3.3));
 
+		// elevamento a potenza
+
+		System.out.println(CalcoliHelper.elevamentoPotenza(6, 3));
 	}
 }

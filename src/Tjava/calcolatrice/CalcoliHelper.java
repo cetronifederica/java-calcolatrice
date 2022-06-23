@@ -1,8 +1,10 @@
 package Tjava.calcolatrice;
 
-public class CalcoliHelper {
+import java.text.DecimalFormat;
 
-	// PRINCIPIO DELL'OVERLOAD
+public class CalcoliHelper {
+	static DecimalFormat df = new DecimalFormat("##.##");
+// PRINCIPIO DELL'OVERLOAD
 
 	// costruttore
 	private CalcoliHelper() {
@@ -16,7 +18,12 @@ public class CalcoliHelper {
 	}
 
 	public static double somma(double numero, double numero2) {
-		return numero + numero2;
+		double somma = numero + numero2;
+		return somma;
+	}
+
+	public static String format(double x) {
+		return df.format(x);
 	}
 
 	// sottrazione tra due numeri interi
@@ -40,13 +47,15 @@ public class CalcoliHelper {
 	// numero assoluto
 	// math
 	public static int numeroAssoluto(int numero) {
-		int numero1 = Math.abs(numero);
-		return numero;
+		return (int) numeroAssoluto((double) numero);
 	}
 
 	public static double numeroAssoluto(double numero) {
-		double numero4 = Math.abs(numero);
-		return numero;
+		if (numero < 0) {
+			return -numero;
+		} else {
+			return numero;
+		}
 	}
 
 	// minimo tra due numeri interi
@@ -82,7 +91,17 @@ public class CalcoliHelper {
 	// elevamento a potenza
 
 	public static double elevamentoPotenza(double base, double esponente) {
-		double result = Math.pow(base, esponente);
-		return result;
+		if (esponente >= 0) {
+
+			if (esponente == 0) {
+				return 1;
+			}
+			if (esponente == 1) {
+				return base;
+			}
+
+		}
+		return base * elevamentoPotenza(base, esponente - 1);
 	}
+
 }

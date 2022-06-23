@@ -17,13 +17,13 @@ public class MainTest {
 
 		System.out.println(CalcoliHelper.moltiplicazione(3, 3));
 
-		System.out.println(CalcoliHelper.moltiplicazione(3.3, 3.3));
+		System.out.println(CalcoliHelper.format(CalcoliHelper.moltiplicazione(3.3, 3.3)));
 
 		// numero assoluto
 
-		System.out.println(CalcoliHelper.numeroAssoluto(3));
+		System.out.println(CalcoliHelper.numeroAssoluto(1000));
 
-		System.out.println(CalcoliHelper.numeroAssoluto(3.3));
+		System.out.println(CalcoliHelper.numeroAssoluto(1000.0000));
 
 		// minimo
 		System.out.println(CalcoliHelper.minimo(6, 9));
@@ -36,6 +36,6 @@ public class MainTest {
 
 		// elevamento a potenza
 
-		System.out.println(CalcoliHelper.elevamentoPotenza(6, 3));
+		System.out.println(CalcoliHelper.elevamentoPotenza(6, 6));
 	}
 }
